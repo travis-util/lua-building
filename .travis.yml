@@ -70,7 +70,11 @@ script:
 # - ls --recursive --color ~/.luarocks/share/lua/5.3
 - ls --recursive --color ~/.luarocks
 - ln -s ~/.luarocks/share/lua/5.3/socket.lua
-- ln -s ~/.luarocks/share/lua/5.3/socket
+- install --directory socket
+- pushd socket
+- ln -s ~/.luarocks/share/lua/5.3/socket/* .
+- ln -s ~/.luarocks/lib/lua/5.3/socket/* .
+- popd
 - lua -e 'require "socket"'
 
 
