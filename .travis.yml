@@ -65,8 +65,8 @@ script:
 - luarocks install --local luasocket
 # Error: Your user does not have write permissions in /usr/local/lib/luarocks/rocks 
 # -- you may want to run as a privileged user or use your local tree with --local.
-- ls --color
-- find . -name socket.lua
+- ls --color /home/travis/.luarocks
+- find /home/travis/.luarocks -name socket.lua
 - lua -e 'require "socket"'
 
 
