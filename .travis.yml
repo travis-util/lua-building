@@ -67,6 +67,8 @@ script:
 # -- you may want to run as a privileged user or use your local tree with --local.
 - ls --color ~/.luarocks
 - find ~/.luarocks -name socket.lua
+- ls ~/.luarocks/share/lua/5.3
+- ln -s ~/.luarocks/share/lua/5.3/socket.lua
 - ln -s ~/.luarocks/share/lua/5.3/socket.lua
 - lua -e 'require "socket"'
 
